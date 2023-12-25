@@ -1,7 +1,8 @@
 # Задача 2: Сумма подсписка
 
-list_1 = (1, 2, 3, 4, 5)
-print(sum(list_1[1:4:]))
+def summa(my_list):
+    print(sum(my_list[1:4]))
+    
 
-list_2 = (10, 20, 30)
-print(sum(list_2[1:4:]))
+summa((1, 2, 3, 4, 5))
+summa((10, 20, 30))

@@ -1,13 +1,20 @@
 # Задача 3: Элементы подсписка
 
-list_1 = (1, 2, 3, 4, 5)
-k = list_1[1]
-n = list_1[0]
-m = list_1[-1]
-print(f"Числа подcписка: {list_1[n:m:k]}")
+def sublist_elements(lst):
+    n = lst[0]
+    m = lst[-1]
+    k = lst[1]
 
-list_1 = (2, 1, 6)
-k = list_1[1]
-n = list_1[0]
-m = list_1[-1]
-print(f"Числа подcписка: {list_1[n:m:k]}")
+    print("Числа подcписка: ", end="")
+    first = True
+    for item in lst[n:m:k]:
+        if first:
+            print(item, end="")
+            first = False
+        else:
+            print(",", item, end="")
+    print()
+    
+    
+sublist_elements([1, 2, 3, 4, 5])   
+sublist_elements([2, 1, 6])
